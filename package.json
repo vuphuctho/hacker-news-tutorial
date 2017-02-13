@@ -1,0 +1,34 @@
+{
+  "name": "hacker-news-tutorial",
+  "version": "1.0.0",
+  "description": "A sample Hacker News application",
+  "main": "index.html",
+  "scripts": {
+    "start": "node bin/http-server",
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuphuctho/hacker-news-tutorial.git"
+  },
+  "keywords": [
+    "hacker-news",
+    "kill-me-pls"
+  ],
+  "author": "Vu Phuc Tho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuphuctho/hacker-news-tutorial/issues"
+  },
+  "homepage": "https://github.com/vuphuctho/hacker-news-tutorial#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babelify": "^7.3.0",
+    "bootstrap": "^3.3.7",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.2"
+  }
+}
