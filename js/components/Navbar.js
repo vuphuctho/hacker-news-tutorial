@@ -8,7 +8,12 @@ let NavItem = require("react-bootstrap/lib").NavItem;
 class Header extends React.Component {
 	constructor(props) {
 		super(props);
+		this.handleSubmit = this.handleSubmit.bind(this);
 		this.state = {};
+	}
+
+	handleSubmit() {
+		this.props.getNavbarRequest( { showSubmitModal :true } );
 	}
 
 	render() {
@@ -25,7 +30,7 @@ class Header extends React.Component {
 					<NavItem href="#">show</NavItem>
 					<NavItem href="#">ask</NavItem>
 					<NavItem href="#">job</NavItem>
-					<NavItem href="#">submit</NavItem>
+					<NavItem href="#" onClick={this.handleSubmit}>submit</NavItem>
 				</Nav>
 				<Nav pullRight>
 					<NavItem href="#">login</NavItem>
