@@ -11,11 +11,11 @@ $ npm install
 ```
 ## Run app
 
-Simplest way to run app in localhost is by using [http-server package](https://www.npmjs.com/package/http-server)
+Use ExpressJS to run app. Use the following command to run app on port 8080:
+
 ```
-$ npm install http-server -g #install package globally
 $ cd app
-$ http-server 
+$ http-server #App runs at 127.0.0.1:8080
 ```
 
 ## Run test
