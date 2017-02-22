@@ -8,7 +8,18 @@ let NavItem = require("react-bootstrap/lib").NavItem;
 class Header extends React.Component {
 	constructor(props) {
 		super(props);
+		this.openSubmitModal = this.openSubmitModal.bind(this);
+		this.displayName = "Navbar";
 		this.state = {};
+	}
+
+	openSubmitModal() {
+		this.props.request({
+			'from': this.displayName,
+			'requestType': 'display',
+			'displayTarget': 'AddPostModal',
+			'action': 'openModal'
+		})
 	}
 
 	render() {
@@ -25,7 +36,7 @@ class Header extends React.Component {
 					<NavItem href="#">show</NavItem>
 					<NavItem href="#">ask</NavItem>
 					<NavItem href="#">job</NavItem>
-					<NavItem href="#">submit</NavItem>
+					<NavItem href="#" onClick={this.openSubmitModal}>submit</NavItem>
 				</Nav>
 				<Nav pullRight>
 					<NavItem href="#">login</NavItem>
@@ -33,6 +44,10 @@ class Header extends React.Component {
 			</Navbar>
 		);
 	}
+}
+
+Header.propsTypes = {
+	request : React.PropTypes.func
 }
 
 module.exports = Header; 
